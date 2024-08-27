@@ -1,0 +1,18 @@
+package org.sample;
+
+import java.io.IOException;
+
+import org.base.Base2;
+import org.junit.Test;
+
+public class Rest2 extends Base2 {
+
+	
+ 
+	@org.testng.annotations.Test
+	public static void runMethod() throws IOException {
+		sendRequestFromJson("src/test/resources/Files/sample01.json");
+		
+	}
+
+}

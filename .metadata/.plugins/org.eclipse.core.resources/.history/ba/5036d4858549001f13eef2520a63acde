@@ -1,0 +1,16 @@
+package org.revis;
+
+public class InheritanceParent {
+
+	 void m1() {
+		System.out.println("Parent Method 1");
+	}
+	 int m2(int a, int b) {
+		System.out.println(a+b);
+		 return 0;
+	 }
+	 String m3(String name) {
+		System.out.println(name);
+		 return null;
+	 }
+}

@@ -1,0 +1,26 @@
+{
+  "baseUrl": "https://api.instantwebtools.net/v1/airlines",
+  "relativeUrl": "",
+  "method": "POST",
+  "status": 200,
+  "headers": {
+    "X-Deviceid": "changeMe",
+    "X-REQUEST-ID": "changeMe",
+    "X-AUTH": "changeMe",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+      "id":"123321",
+    "name": "Indian Airways",
+    "country": "India",
+    "established": "2006"
+ },
+    "account_linking_enabled": false,
+    "account_number": "changeMe",
+    "addons": [],
+    "destination_plan_id": "changeMe",
+    "effective": "changeMe",
+    "number": "changeMe",
+    "source_plan_id": "d994799f-db27-48cb-a195-733b00147a5d"
+  }
+}

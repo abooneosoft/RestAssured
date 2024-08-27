@@ -1,0 +1,107 @@
+package org.base;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.Assert;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Map;
+
+public class Base2 {
+
+	public static RequestSpecification requestSpecification;
+
+    // Method to initialize the request object with base URI
+    public static void requestObject(String baseUri) {
+        RestAssured.baseURI = baseUri;
+        requestSpecification = RestAssured.given();
+    }
+
+    // Method to add query parameters
+    public static void addQueryParameter(String parameterName, String parameterValue) {
+        requestSpecification.queryParam(parameterName, parameterValue);
+    }
+
+    // Method to add path parameters
+    public static void addPathParameter(String parameterName, String parameterValue) {
+        requestSpecification.pathParam(parameterName, parameterValue);
+    }
+
+    // Method to create a response object based on the request type
+    public static Response createResponseObj(String requestType, String resources) {
+        switch (requestType) {
+            case "GET":
+                return requestSpecification.request(Method.GET, resources);
+            case "POST":
+                return requestSpecification.request(Method.POST, resources);
+            case "PUT":
+                return requestSpecification.request(Method.PUT, resources);
+            case "DELETE":
+                return requestSpecification.request(Method.DELETE, resources);
+            default:
+                throw new IllegalArgumentException("Invalid request type: " + requestType);
+        }
+    }
+
+    // Method to validate the response status code
+    public static void validateResponseCode(Response response, int expectedStatusCode) {
+        int statusCode = response.getStatusCode();
+        Assert.assertEquals(statusCode, expectedStatusCode);
+        System.out.println("Validation of Status Code is " + expectedStatusCode);
+    }
+
+    // Method to print the response body
+    public static void printResponseBody(Response response) {
+        String asPrettyString = response.getBody().asPrettyString();
+        System.out.println(asPrettyString);
+    }
+
+    // Method to read JSON data from a file and return it as a Map
+    public static Map<String, Object> readJsonFile(String filePath) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(new File(filePath), Map.class);
+    }
+
+    // Example method to send a request based on the JSON file
+    public static void sendRequestFromJson(String filePath) throws IOException {
+        // Read the JSON file into a Map
+        Map<String, Object> jsonData = readJsonFile(filePath);
+
+        // Extract values from the JSON data
+        String baseUrl = (String) jsonData.get("baseUrl");
+        String relativeUrl = (String) jsonData.get("relativeUrl");
+        String method = (String) jsonData.get("method");
+        int expectedStatus = (Integer) jsonData.get("status");
+        Map<String, String> headers = (Map<String, String>) jsonData.get("headers");
+        Map<String, Object> payload = (Map<String, Object>) jsonData.get("payload");
+
+        // Initialize the request object with the base URL
+        requestObject(baseUrl);
+
+        // Add headers
+        if (headers != null) {
+            requestSpecification.headers(headers);
+        }
+
+        // Add payload if available
+        if (payload != null) {
+            requestSpecification.body(payload);
+        }
+
+        // Send the request based on the method and validate the status code
+        Response response = createResponseObj(method, relativeUrl);
+        validateResponseCode(response, expectedStatus);
+
+        // Print the response body
+        printResponseBody(response);
+    }
+}

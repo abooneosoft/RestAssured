@@ -1,0 +1,12 @@
+{
+	"baseUrl": "https://reqres.in/api/users/23",
+	"relativeUrl": "",
+	"method": "PUT",
+	"status": 200,
+	"headers": {
+		"X-Deviceid": "changeMe",
+		"X-REQUEST-ID": "changeMe",
+		"X-AUTH": "changeMe",
+		"Content-Type": "application/json"
+	}
+}

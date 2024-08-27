@@ -1,0 +1,11 @@
+package org.revis;
+
+public class InheritanceChild {
+
+	public static void main(String[] args) {
+		
+	}
+
+	
+
+}

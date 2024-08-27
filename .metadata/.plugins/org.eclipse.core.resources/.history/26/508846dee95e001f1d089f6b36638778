@@ -1,0 +1,10 @@
+{
+  "baseUrl": "https://reqres.in/api/users",
+  "relativeUrl": "",
+  "method": "POST",
+  "status": 200,
+  "payload": {
+    "name": "morpheus",
+    "job": "leader"
+ }
+}

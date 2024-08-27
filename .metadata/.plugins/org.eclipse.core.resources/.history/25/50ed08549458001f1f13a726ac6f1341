@@ -1,0 +1,15 @@
+package org.sample;
+
+import java.io.IOException;
+
+import org.base.BaseGPT;
+
+import io.restassured.response.Response;
+
+public class Rest2 extends Base2 {
+
+	public static void main(String[] args) throws IOException {
+        // Send the request using the JSON file
+        sendRequestFromJson("src/test/resources/Files/sample01.json");
+    }
+}

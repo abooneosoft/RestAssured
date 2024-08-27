@@ -1,0 +1,10 @@
+package lvl1;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+public class PostMethod {
+
+	void m1() {
+		given().when().get("https://reqres.in/api/unknown/2")
+		.then().statusCode(200);
+	}
+}

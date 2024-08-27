@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;org.revis.InheritanceChile&apos; to &apos;InheritanceChild&apos;&#x0D;&#x0A;- Original project: &apos;SampleJava&apos;&#x0D;&#x0A;- Original element: &apos;org.revis.InheritanceChile&apos;&#x0D;&#x0A;- Renamed element: &apos;org.revis.InheritanceChild&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;InheritanceChile&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;org.revis{InheritanceChile.java[InheritanceChile" matchStrategy="1" name="InheritanceChild" qualified="false" references="true" similarDeclarations="false" stamp="1721802204153" textual="false" version="1.0"/>
+</session>

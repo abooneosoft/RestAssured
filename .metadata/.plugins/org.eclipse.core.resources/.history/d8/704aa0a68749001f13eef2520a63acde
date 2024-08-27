@@ -1,0 +1,28 @@
+package org.revis;
+
+public class InheritanceChild extends InheritanceParent {
+	
+	static void mc1() {
+		System.out.println("Static Child method");
+	}
+	
+	
+
+	public static void main(String[] args) {
+		mc1();
+		int m2 = m2(10, 6);
+		System.out.println(m2);
+		String m3 = m3("Aboo");
+		System.out.println(m3);
+		
+		
+		InheritanceChild ch = new InheritanceChild();
+		ch.m1();
+		int m22 = m2(54, 53);
+		System.out.println(m22);
+		
+	}
+
+	
+
+}

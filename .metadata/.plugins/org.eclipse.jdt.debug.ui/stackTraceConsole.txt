@@ -1,0 +1,60 @@
+io.cucumber.junit.UndefinedStepException: The step 'user is on the Add New Team' and 10 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user is on the Add New Team")
+public void user_is_on_the_add_new_team() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user can select the company in SelectCompany")
+public void user_can_select_the_company_in_select_company() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user can enter the team name in TeamName")
+public void user_can_enter_the_team_name_in_team_name() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user can select the project in SelectProject")
+public void user_can_select_the_project_in_select_project() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user can select the team event in SelectTeamEvent")
+public void user_can_select_the_team_event_in_select_team_event() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user can switch the status to Active or Inactive in Status")
+public void user_can_switch_the_status_to_active_or_inactive_in_status() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user can select the captain from SelectCaptain")
+public void user_can_select_the_captain_from_select_captain() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user also can add the captain by InviteCaptain button")
+public void user_also_can_add_the_captain_by_invite_captain_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user can select the user from SelectUsers")
+public void user_can_select_the_user_from_select_users() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user also can add the users by InviteUsers button")
+public void user_also_can_add_the_users_by_invite_users_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user can submit to create a Team by clicking SubmitButton")
+public void user_can_submit_to_create_a_team_by_clicking_submit_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

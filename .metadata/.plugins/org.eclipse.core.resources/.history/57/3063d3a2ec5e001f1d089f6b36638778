@@ -1,0 +1,12 @@
+{
+	"baseUrl": "https://reqres.in/api/users?page=2",
+	"relativeUrl": "",
+	"method": "GET",
+	"status": 200,
+	"headers": {
+		"X-Deviceid": "changeMe",
+		"X-REQUEST-ID": "changeMe",
+		"X-AUTH": "changeMe",
+		"Content-Type": "application/json"
+	}
+}

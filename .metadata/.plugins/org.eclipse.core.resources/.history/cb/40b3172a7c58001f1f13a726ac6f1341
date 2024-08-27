@@ -1,0 +1,28 @@
+package org.sample;
+
+import java.io.IOException;
+
+import org.base.BaseGPT;
+
+import io.restassured.response.Response;
+
+public class RestGPT extends BaseGPT {
+
+	public static void main(String[] args) throws IOException {
+		
+		// Set the base URI for the API
+		requestObject("https://example.com/api");
+
+		// Add headers from JSON file
+		addHeadersFromJson("path/to/headers.json");
+
+		// Create and send the POST request
+		Response response = createResponseObj("POST", "/resource");
+
+		// Validate the response code
+		validateResponseCode("POST", response);
+
+		// Print the response body
+		printResponseBody(response);
+	}
+}

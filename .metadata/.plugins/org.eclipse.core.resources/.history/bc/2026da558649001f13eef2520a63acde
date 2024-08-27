@@ -1,0 +1,18 @@
+package org.revis;
+
+public class InheritanceChild extends InheritanceParent {
+	
+	void m1() {
+		
+	}
+
+	public static void main(String[] args) {
+		int m2 = m2(10, 6);
+		System.out.println(m2);
+		String m3 = m3("Aboo");
+		System.out.println(m3);
+	}
+
+	
+
+}
